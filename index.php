@@ -9,6 +9,12 @@
     ['zelda hidden chest', 'link', 'lorem', 50]
  ];
 
+ $names = ['Art', 'Hello', 'World'];
+
+ foreach($n as $names) {
+    echo $n;
+ }
+
  var_dump($blogs);
 
 ?>
