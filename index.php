@@ -3,19 +3,29 @@
 
  // multi-dimensionnal arrays more like an objects
 
- $blogs = [
-    ['mario party', 'mario', 'lorem', 30],
-    ['mario kart chets', 'toad', 'lorem', 25],
-    ['zelda hidden chest', 'link', 'lorem', 50]
- ];
+//  $blogs = [
+//     ['mario party', 'mario', 'lorem', 30],
+//     ['mario kart chets', 'toad', 'lorem', 25],
+//     ['zelda hidden chest', 'link', 'lorem', 50]
+//  ];
 
- $names = ['Art', 'Hello', 'World'];
+//  $names = ['Art', 'Hello', 'World'];
 
- foreach($n as $names) {
-    echo $n;
+//  foreach($names as $n) {
+//     echo "test" . $n;
+//  }
+
+ $products = ["item" => "shoes", "price" => 300];
+
+ function state($product) {
+    return "{$product['item']} and {$product['price']}";
  }
 
- var_dump($blogs);
+$result = state($products);
+;
+echo $result
+
+//  var_dump($blogs);
 
 ?>
 
