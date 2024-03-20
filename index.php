@@ -15,15 +15,27 @@
 //     echo "test" . $n;
 //  }
 
- $products = ["item" => "shoes", "price" => 300];
+//  $products = ["item" => "shoes", "price" => 300];
 
- function state($product) {
-    return "{$product['item']} and {$product['price']}";
- }
+//  function state($product) {
+//     return "{$product['item']} and {$product['price']}";
+//  }
 
-$result = state($products);
-;
-echo $result
+// $result = state($products);
+// ;
+// echo $result
+
+$name = 'mark';
+
+function sayBye(&$name) {
+   //  global $name access the global variable outside the scope
+
+    $name = 'hello';
+    echo "Bye $name";
+}
+
+sayBye($name);
+//echo $name;
 
 //  var_dump($blogs);
 
