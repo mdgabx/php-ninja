@@ -1,12 +1,6 @@
 <?php
-    // connect to database
 
-    $conn = mysqli_connect('localhost', 'mark', 'phptest', 'pizza_house');
-
-    // check the connection
-    if(!$conn) {
-        echo "Connection error: " . mysqli_connect_error();
-    } 
+    include('config/db_connect.php');
 
     // query to fetch all pizzas
 
@@ -37,7 +31,7 @@
 
     <div class="container">
         <div class="row">
-            <?php foreach($pizzas as $pizza){ ?>
+            <?php foreach($pizzas as $pizza) : ?>
                 <div class="col s6 md3">
                     <div class="card z-depth-0">
                         <div class="card-content center">
@@ -55,7 +49,7 @@
                         </div>
                     </div>
                 </div>
-            <?php } ?>
+            <?php endforeach; ?>
         </div>
     </div>
 
