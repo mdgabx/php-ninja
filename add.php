@@ -80,7 +80,7 @@ if (isset($_POST['submit'])) {
     <h4 class="center">
         Add a Pizza
     </h4>
-    <form class="white" action="add.php" method="POST">
+    <form class="white" action="<?= $_SERVER['PHP_SELF']  ?>" method="POST">
         <label>Your Email:</label>
         <input type="text" name="email" value="<?= htmlspecialchars($email) ?>" />
         <div class="red-text"><?=  $errors['email']; ?></div>
