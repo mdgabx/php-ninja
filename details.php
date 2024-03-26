@@ -19,8 +19,6 @@
 
             echo "query error: " . mysqli_error($conn);
         }
-
-
     }
     
     // check get request id param
