@@ -22,11 +22,17 @@
     // sessions
 
     if(isset($_POST['submit'])) {
+        // set cookies for gender
+     
         session_start();
+
+        setcookie('gender', $_POST['gender']);
+
+        var_dump($_POST);
 
         $_SESSION['name'] = $_POST['name'];
 
-        echo $_SESSION['name'];
+        // echo $_SESSION['name'];
 
         header('Location: index.php');
     }
@@ -43,8 +49,14 @@
 
         <!-- <?php  echo $score > 40 ? 'high score' : 'low score'; ?> -->
 
-        <form action="<?= $_SERVER['PHP_SELF'] ?>" method="POST">
+        <form action="sandbox.php" method="POST">
             <input type="text" name="name"> 
+
+            <select name="gender">
+                <option value="male">male</option>
+                <option value="female">female</option>
+            </select>
+
             <input type="submit"name="submit" value="submit">
         </form>
 
